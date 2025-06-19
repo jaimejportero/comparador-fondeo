@@ -11,7 +11,6 @@ interface FiltrosProps {
     faseUnica: boolean;
     numeroFases: number;
     capitalSeleccionado: number;
-    costeMaximo: number;
     objetivoFase1Minimo: number;
     objetivoFase2Minimo: number;
     tiempoFase: string;

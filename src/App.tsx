@@ -11,7 +11,6 @@ export default function App() {
     faseUnica: false,
     numeroFases: 0,
     capitalSeleccionado: 0,
-    costeMaximo: 10000,
     objetivoFase1Minimo: 0,
     objetivoFase2Minimo: 0,
     tiempoFase: "",
@@ -20,7 +19,6 @@ export default function App() {
   const cuentasFiltradas = cuentasData.filter((cuenta) => {
     const tieneCapitalMinimo = cuenta.capitales.some((c) => c >= filtros.capitalMinimo);
     const tienePrecioMaximo = cuenta.precios.some((p) => p <= filtros.precioMaximo);
-    const tieneCosteMaximo = cuenta.precios.some((p) => p <= filtros.costeMaximo);
     const cumpleCapitalExacto =
       filtros.capitalSeleccionado === 0 || cuenta.capitales.includes(filtros.capitalSeleccionado);
     const cumpleObjetivoF1 = cuenta.objetivo_fase1 >= filtros.objetivoFase1Minimo;
@@ -37,7 +35,6 @@ export default function App() {
     return (
       tieneCapitalMinimo &&
       tienePrecioMaximo &&
-      tieneCosteMaximo &&
       cumpleCapitalExacto &&
       cumpleObjetivoF1 &&
       cumpleObjetivoF2 &&

@@ -1,5 +1,6 @@
 // Filtros.tsx
 import React from "react";
+import { cuentasData } from "../data/cuentas";
 
 interface FiltrosProps {
   filtros: {
@@ -9,7 +10,6 @@ interface FiltrosProps {
     faseUnica: boolean;
     numeroFases: number;
     capitalSeleccionado: number;
-    costeMaximo: number;
     objetivoFase1Minimo: number;
     objetivoFase2Minimo: number;
     tiempoFase: string;
@@ -17,10 +17,12 @@ interface FiltrosProps {
   setFiltros: React.Dispatch<React.SetStateAction<FiltrosProps["filtros"]>>;
 }
 
+// Obtener capitales únicos de todas las cuentas
+const capitalesUnicos = Array.from(new Set(cuentasData.flatMap(c => c.capitales))).sort((a, b) => a - b);
+
 export const Filtros: React.FC<FiltrosProps> = ({ filtros, setFiltros }) => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const target = e.target;
-
     const name = target.name;
     const type = target instanceof HTMLInputElement ? target.type : undefined;
     const value = target.value;
@@ -28,7 +30,7 @@ export const Filtros: React.FC<FiltrosProps> = ({ filtros, setFiltros }) => {
 
     setFiltros(prev => ({
       ...prev,
-      [name]: type === 'checkbox' ? checked : type === 'number' ? Number(value) : value,
+      [name]: name === 'capitalSeleccionado' || type === 'number' ? Number(value) : type === 'checkbox' ? checked : value,
     }));
   };
 
@@ -63,7 +65,7 @@ export const Filtros: React.FC<FiltrosProps> = ({ filtros, setFiltros }) => {
           className="bg-gray-800 border border-gray-600 text-white p-2 rounded w-full"
         >
           <option value={0}>Todos los capitales</option>
-          {[10000, 20000, 30000, 50000, 80000, 100000, 160000].map(c => (
+          {capitalesUnicos.map(c => (
             <option key={c} value={c}>{`€${c.toLocaleString()}`}</option>
           ))}
         </select>

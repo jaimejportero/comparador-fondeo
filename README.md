@@ -1,58 +1,32 @@
-<<<<<<< HEAD
-# React + TypeScript + Vite
+# 📊 Comparador de Cuentas Fondeadas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web para comparar cuentas fondeadas de trading como FTMO, E8, My Forex Funds, Noctorial, entre otras. El usuario puede filtrar por capital inicial, precio, tipo de fases y si permiten operar en fin de semana.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologías utilizadas
 
-## Expanding the ESLint configuration
+- ⚡ **[Vite](https://vitejs.dev/)** – Bundler ultra rápido para desarrollo moderno en frontend.
+- 🔐 **[TypeScript](https://www.typescriptlang.org/)** – Tipado fuerte sobre JavaScript.
+- 🎨 **[Tailwind CSS](https://tailwindcss.com/)** – Framework de utilidades para estilos rápidos y responsivos.
+- ⚛️ **React 18** – Librería de UI basada en componentes.
+- 💻 **Git + GitHub** – Control de versiones y alojamiento del repositorio.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## ✨ Funcionalidades
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- 🔍 Filtros por capital mínimo, precio máximo y si permite operar en fin de semana.
+- 📊 Visualización rápida de los requisitos de cada cuenta fondeada.
+- 📱 Totalmente responsive (adaptado a móviles y escritorio).
+- 🚀 Preparado para producción con despliegue en **Vercel**.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
-=======
-# comparador-fondeadas
->>>>>>> 159b0a8c584ed7601b5d83cdc7ce625e184966fb
+## 📦 Instalación local
+
+1. Clona el repositorio:
+
+```bash
+git clone https://github.com/jaimejportero/comparador-fondeadas.git
+cd comparador-fondeadas

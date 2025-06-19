@@ -7,6 +7,7 @@ interface FiltrosProps {
   filtros: {
     capitalMinimo: number;
     precioMaximo: number;
+    costeMaximo:number;
     mantieneFinde: boolean;
     faseUnica: boolean;
     capitalSeleccionado: number;

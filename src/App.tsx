@@ -110,7 +110,8 @@ export default function App() {
     const cumpleMantieneFinde = !filtros.mantieneFinde || cuenta.mantiene_finde;
     const cumpleFaseUnica = !filtros.faseUnica || cuenta.fase_unica;
     const cumpleTiempoFase =
-      filtros.tiempoFase === "" || cuenta.tiempoFase.toLowerCase().includes(filtros.tiempoFase.toLowerCase());
+      filtros.tiempoFase === "" || cuenta.tiempoFaseTipo === filtros.tiempoFase;
+
     const cumpleNumeroFases =
       filtros.numeroFases === 0 || (cuenta.fase_unica ? 1 : 2) === filtros.numeroFases;
 

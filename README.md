@@ -28,5 +28,5 @@ Aplicación web para comparar cuentas fondeadas de trading como FTMO, E8, My For
 1. Clona el repositorio:
 
 ```bash
-git clone https://github.com/jaimejportero/comparador-fondeadas.git
+git clone https://github.com/jaimejportero/comparador-fondeo.git
 cd comparador-fondeadas

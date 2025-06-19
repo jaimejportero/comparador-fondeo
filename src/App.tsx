@@ -88,7 +88,7 @@ const preguntasFrecuentes = [
 export default function App() {
   const [filtros, setFiltros] = useState({
     capitalMinimo: 0,
-    precioMaximo: 0,
+    precioMaximo: 3000,
     costeMaximo: 0,
     mantieneFinde: false,
     faseUnica: false,
@@ -163,8 +163,8 @@ export default function App() {
                       {reseñasPorPlataforma[plataforma]?.map((texto, i) => (
                         <p key={i} className={
                           i === 0 ? "text-green-400 text-sm mb-2" :
-                          i === 1 ? "text-yellow-400 text-sm mb-2" :
-                          "text-red-400 text-sm"
+                            i === 1 ? "text-yellow-400 text-sm mb-2" :
+                              "text-red-400 text-sm"
                         }>
                           “{texto}”
                         </p>
@@ -174,21 +174,23 @@ export default function App() {
                 </div>
               </div>
 
-              <div className="mt-10">
-                <h2 className="text-2xl font-bold text-teal-400 mb-4 text-center">Preguntas Frecuentes</h2>
-                <div className="grid gap-4 text-gray-300 max-w-4xl mx-auto">
-                  {preguntasFrecuentes.map((faq, idx) => (
-                    <details key={idx} className="bg-gray-800 p-4 rounded-md border border-gray-700">
-                      <summary className="cursor-pointer font-semibold text-white">{faq.pregunta}</summary>
-                      <p className="mt-2 text-gray-300">{faq.respuesta}</p>
-                    </details>
-                  ))}
-                </div>
-              </div>
+
             </>
           )}
+
         </>
       )}
+      <div className="mt-10">
+        <h2 className="text-2xl font-bold text-teal-400 mb-4 text-center">Preguntas Frecuentes</h2>
+        <div className="grid gap-4 text-gray-300 max-w-4xl mx-auto">
+          {preguntasFrecuentes.map((faq, idx) => (
+            <details key={idx} className="bg-gray-800 p-4 rounded-md border border-gray-700">
+              <summary className="cursor-pointer font-semibold text-white">{faq.pregunta}</summary>
+              <p className="mt-2 text-gray-300">{faq.respuesta}</p>
+            </details>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

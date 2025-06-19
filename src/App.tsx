@@ -84,6 +84,7 @@ export default function App() {
   const [filtros, setFiltros] = useState({
     capitalMinimo: 0,
     precioMaximo: 0,
+    costeMaximo: 0, // ✅ FALTA ESTE CAMPO
     mantieneFinde: false,
     faseUnica: false,
     numeroFases: 0,
@@ -110,7 +111,7 @@ export default function App() {
       cumpleCapitalExacto &&
       cumpleMantieneFinde &&
       cumpleFaseUnica &&
-      cumpleTiempoFase 
+      cumpleTiempoFase
     );
   });
 

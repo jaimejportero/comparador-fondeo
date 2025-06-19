@@ -8,9 +8,6 @@ const tieneFiltrosAplicados = (filtros: any) => {
     filtros.capitalMinimo > 0 ||
     filtros.precioMaximo > 0 ||
     filtros.capitalSeleccionado > 0 ||
-    filtros.numeroFases > 0 ||
-    filtros.objetivoFase1Minimo > 0 ||
-    filtros.objetivoFase2Minimo > 0 ||
     filtros.tiempoFase !== "" ||
     filtros.mantieneFinde ||
     filtros.faseUnica
@@ -101,25 +98,19 @@ export default function App() {
     const tienePrecioMaximo = filtros.precioMaximo === 0 || cuenta.precios.some((p) => p <= filtros.precioMaximo);
     const cumpleCapitalExacto =
       filtros.capitalSeleccionado === 0 || cuenta.capitales.some((c) => c === filtros.capitalSeleccionado);
-    const cumpleObjetivoF1 = cuenta.objetivo_fase1 >= filtros.objetivoFase1Minimo;
-    const cumpleObjetivoF2 = cuenta.objetivo_fase2 >= filtros.objetivoFase2Minimo;
     const cumpleMantieneFinde = !filtros.mantieneFinde || cuenta.mantiene_finde;
     const cumpleFaseUnica = !filtros.faseUnica || cuenta.fase_unica;
     const cumpleTiempoFase =
       filtros.tiempoFase === "" || cuenta.tiempoFase.toLowerCase().includes(filtros.tiempoFase.toLowerCase());
-    const cumpleNumeroFases =
-      filtros.numeroFases === 0 || (cuenta.fase_unica ? 1 : 2) === filtros.numeroFases;
+
 
     return (
       tieneCapitalMinimo &&
       tienePrecioMaximo &&
       cumpleCapitalExacto &&
-      cumpleObjetivoF1 &&
-      cumpleObjetivoF2 &&
       cumpleMantieneFinde &&
       cumpleFaseUnica &&
-      cumpleTiempoFase &&
-      cumpleNumeroFases
+      cumpleTiempoFase 
     );
   });
 

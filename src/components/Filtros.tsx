@@ -7,10 +7,13 @@ interface FiltrosProps {
   filtros: {
     capitalMinimo: number;
     precioMaximo: number;
-    costeMaximo:number;
+    costeMaximo: number;
     mantieneFinde: boolean;
     faseUnica: boolean;
+    numeroFases: number;
     capitalSeleccionado: number;
+    objetivoFase1Minimo: number;
+    objetivoFase2Minimo: number;
     tiempoFase: string;
   };
   setFiltros: React.Dispatch<React.SetStateAction<FiltrosProps["filtros"]>>;

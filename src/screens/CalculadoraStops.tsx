@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Helmet } from "react-helmet";
 import {
   ComposedChart,
   XAxis,
@@ -40,12 +39,10 @@ export default function CalculadoraStops() {
 
   return (
     <div className="min-h-screen bg-gray-950 text-white p-4">
-      <Helmet>
         <title>Calculadora de Stop Loss y Take Profit | Herramienta de Gestión de Riesgo</title>
         <meta name="description" content="Calcula automáticamente tus niveles de Stop Loss y Take Profit en función de tu riesgo y relación beneficio/riesgo. Visualiza en gráfico las posibles rutas del precio mediante velas japonesas." />
         <meta name="keywords" content="calculadora stop loss, take profit, trading gestión de riesgo, relación riesgo beneficio, velas japonesas" />
         <link rel="canonical" href="https://tusitio.com/calculadora-stop-loss" />
-      </Helmet>
 
       <div className="max-w-3xl mx-auto bg-gray-900 p-6 rounded-2xl shadow-xl border border-gray-700">
         <h1 className="text-3xl font-bold text-teal-400 mb-6 text-center">🎯 Calculadora de Stop Loss / Take Profit</h1>

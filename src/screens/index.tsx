@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Helmet } from "react-helmet";
 import { cuentasData } from "../data/cuentas";
 import { CuentaCard } from "../components/CuentaCard";
 import { Filtros } from "../components/Filtros";
@@ -224,13 +223,11 @@ export default function App() {
 
   return (
     <>
-      <Helmet>
         <title>Comparador de Cuentas Fondeadas 2025 | Mejores cuentas de trading fondeado</title>
         <meta name="description" content="Compara las mejores cuentas fondeadas para traders en 2025. Filtra por precio, capital, activos, fases y más. ¡Encuentra tu cuenta ideal!" />
         <meta name="keywords" content="cuentas fondeadas, trading fondeado, prop firms, evaluación trading, cuentas de trading 2025, FTMO, The5ers, FXIFY, mejores cuentas fondeo" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="SaludVistosa" />
-      </Helmet>
       <div className="min-h-screen bg-gray-950 text-white p-4">
         <Filtros filtros={filtros} setFiltros={setFiltros} />
 

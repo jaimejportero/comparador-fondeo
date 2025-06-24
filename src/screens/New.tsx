@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Helmet } from "react-helmet";
 
 interface Noticia {
   title: string;
@@ -31,12 +30,10 @@ export default function NoticiasTrading() {
 
   return (
     <div className="min-h-screen bg-gray-950 text-white p-4">
-      <Helmet>
         <title>📰 Noticias de Trading y Finanzas | FundedTools</title>
         <meta name="description" content="Mantente al día con las últimas noticias de trading, forex y mercados financieros. Información actualizada diariamente para traders e inversores." />
         <meta name="keywords" content="noticias trading, forex, mercados financieros, actualidad económica, análisis fundamental" />
         <link rel="canonical" href="https://comparador-fondeo.vercel.app/noticias" />
-      </Helmet>
 
       <div className="max-w-3xl mx-auto bg-gray-900 p-6 rounded-2xl shadow-xl border border-gray-700">
         <h1 className="text-3xl font-bold text-teal-400 mb-6 text-center">📰 Noticias de Trading y Finanzas</h1>

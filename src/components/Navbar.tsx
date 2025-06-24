@@ -41,6 +41,9 @@ export default function Navbar() {
           <Link to="/stops" className={linkClass("/stops")}>
             Stops / TP
           </Link>
+          <Link to="/simularCurva" className={linkClass("/simularCurva")}>
+            Simulador de capital
+          </Link>
           <Link to="/soporte" className={linkClass("/soporte")}>
             Soporte
           </Link>

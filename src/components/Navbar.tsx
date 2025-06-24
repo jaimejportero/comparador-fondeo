@@ -26,9 +26,9 @@ export default function Navbar() {
           📊 FundedTools
         </Link>
         <div className="flex gap-4">
-          <Link to="/noticias" className={linkClass("/noticias")}>
+          {/* <Link to="/noticias" className={linkClass("/noticias")}>
             Noticias
-          </Link>
+          </Link> */}
           <Link to="/" className={linkClass("/")}>
             Ranking
           </Link>

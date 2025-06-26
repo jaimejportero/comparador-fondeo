@@ -223,6 +223,7 @@ export default function App() {
 
   return (
     <>
+    
         <title>Comparador de Cuentas Fondeadas 2025 | Mejores cuentas de trading fondeado</title>
         <meta name="description" content="Compara las mejores cuentas fondeadas para traders en 2025. Filtra por precio, capital, activos, fases y más. ¡Encuentra tu cuenta ideal!" />
         <meta name="keywords" content="cuentas fondeadas, trading fondeado, prop firms, evaluación trading, cuentas de trading 2025, FTMO, The5ers, FXIFY, mejores cuentas fondeo" />

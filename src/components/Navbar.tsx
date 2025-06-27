@@ -58,6 +58,7 @@ function NavLinks({ linkClass }: { linkClass: (path: string) => string }) {
     <>
       <span className="border-l border-gray-600 h-5 mx-2"></span>
       <Link to="/" className={linkClass("/")}>Qué es FundedTools</Link>
+      <Link to="/noticias" className={linkClass("/noticias")}>Blog</Link>
       <Link to="/faqs" className={linkClass("/faqs")}>Preguntas frecuentes</Link>
       <span className="border-l border-gray-600 h-5 mx-2"></span>
       <Link to="/comparador" className={linkClass("/comparador")}>Comparador cuentas</Link>

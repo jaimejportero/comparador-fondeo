@@ -9,11 +9,7 @@ export default function PaginaContacto() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const datos = {
-      nombre,
-      email,
-      mensaje,
-    };
+    const datos = { nombre, email, mensaje };
 
     try {
       const res = await fetch("https://formsubmit.co/ajax/jaimejportero@gmail.com", {
@@ -39,9 +35,11 @@ export default function PaginaContacto() {
   return (
     <div className="min-h-screen bg-gray-950 text-white p-6">
       <div className="max-w-2xl mx-auto bg-gray-900 p-8 rounded-xl shadow-xl border border-gray-700">
-        <h1 className="text-3xl font-bold text-teal-400 mb-6 text-center">📩 Contacto / Soporte</h1>
-        <p className="mb-6 text-gray-400 text-center">
-          ¿Tienes dudas, sugerencias o necesitas ayuda? Escríbeme a través del formulario y recibirás respuesta lo antes posible.
+        <h1 className="text-3xl font-bold text-teal-400 mb-4 text-center">
+          📩 Contacto y Soporte Técnico
+        </h1>
+        <p className="text-gray-300 text-base mb-6 text-center">
+          ¿Tienes alguna duda sobre las herramientas de simulación, calculadoras de trading o el funcionamiento de la web? Aquí puedes ponerte en contacto directamente conmigo.
         </p>
 
         {!enviado ? (
@@ -84,8 +82,35 @@ export default function PaginaContacto() {
             </button>
           </form>
         ) : (
-          <p className="text-green-400 text-center text-lg font-semibold">✅ ¡Mensaje enviado correctamente!</p>
+          <p className="text-green-400 text-center text-lg font-semibold">
+            ✅ ¡Mensaje enviado correctamente! Te responderé pronto.
+          </p>
         )}
+
+        {/* Contenido adicional para SEO y AdSense */}
+        <div className="mt-10 text-gray-300 text-base space-y-5">
+          <h2 className="text-xl font-bold text-white">❓ Preguntas frecuentes</h2>
+
+          <div>
+            <strong>¿Cuánto tiempo tardas en responder?</strong>
+            <p>Normalmente en menos de 24 horas laborables. Si es urgente, puedes indicar “urgente” en el mensaje.</p>
+          </div>
+
+          <div>
+            <strong>¿Puedo sugerir una nueva herramienta o funcionalidad?</strong>
+            <p>¡Por supuesto! Todas las sugerencias son bienvenidas. Este proyecto evoluciona gracias a las ideas de los usuarios.</p>
+          </div>
+
+          <div>
+            <strong>¿Dónde puedo encontrar información legal?</strong>
+            <p>En el pie de página tienes enlaces a la Política de Privacidad, Aviso Legal y Política de Cookies.</p>
+          </div>
+
+          <div>
+            <strong>¿Qué ocurre con mis datos personales?</strong>
+            <p>Tu correo y mensaje se usan solo para responderte. No se almacenan en ninguna base de datos y se eliminan tras la respuesta.</p>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -43,6 +43,31 @@ export default function CalculadoraTamañoPosicion() {
           📐 Calculadora de Tamaño de Posición
         </h1>
 
+        {/* Explicación educativa */}
+        <div className="mb-10 text-gray-300 space-y-6 text-base leading-relaxed">
+          <h2 className="text-xl font-bold text-white">
+            ¿Qué es el tamaño de posición y para qué sirve?
+          </h2>
+          <p>
+            El tamaño de posición es una herramienta esencial para controlar el riesgo en cada operación.
+            Establecer cuántas unidades comprar o vender permite mantener la disciplina y evitar pérdidas
+            mayores a lo planeado.
+          </p>
+          <p>
+            Esta calculadora te ayuda a definir con precisión el número óptimo de unidades en función de tu
+            capital disponible, tu nivel de riesgo por operación y la distancia al stop loss.
+          </p>
+          <p>
+            💡 <strong>Ejemplo:</strong> Si tienes 10.000 € y arriesgas un 1% (100 €) por operación, y tu stop está a
+            2€, deberías abrir una posición de 50 unidades.
+          </p>
+          <p>
+            Gestionar bien tu tamaño de posición es uno de los pilares de una estrategia de trading sólida
+            y profesional.
+          </p>
+        </div>
+
+        {/* Formulario */}
         <p className="text-gray-400 mb-6 text-center">
           Calcula automáticamente cuántas unidades abrir según tu capital, riesgo y stop loss. Esencial para traders que buscan proteger su cuenta.
         </p>
@@ -118,6 +143,23 @@ export default function CalculadoraTamañoPosicion() {
             </p>
           </div>
         )}
+
+        {/* FAQ Educativa */}
+        <div className="mt-12 text-gray-300 space-y-6 text-base leading-relaxed">
+          <h2 className="text-xl font-bold text-white">❓ Preguntas frecuentes</h2>
+          <div>
+            <strong>¿Qué porcentaje de riesgo se recomienda por operación?</strong>
+            <p>La mayoría de traders profesionales arriesgan entre un 0.5% y un 2% por operación.</p>
+          </div>
+          <div>
+            <strong>¿Puedo usar esta calculadora para cualquier tipo de activo?</strong>
+            <p>Sí, puedes usarla para acciones, forex, criptomonedas u otros. Solo ajusta los parámetros según el tipo de activo.</p>
+          </div>
+          <div>
+            <strong>¿Qué pasa si el tamaño de posición calculado supera mi capital?</strong>
+            <p>La herramienta ajusta automáticamente el tamaño para que nunca excedas tu capital disponible.</p>
+          </div>
+        </div>
       </div>
     </div>
   );

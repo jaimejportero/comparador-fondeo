@@ -1,0 +1,10 @@
+{
+  "functions": {
+    "api/noticias.ts": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "rewrites": [
+    { "source": "/api/noticias", "destination": "/api/noticias.ts" }
+  ]
+}

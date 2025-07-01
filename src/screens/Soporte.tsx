@@ -39,6 +39,10 @@ export default function PaginaContacto() {
           📩 Contacto y Soporte Técnico
         </h1>
         <p className="text-gray-300 text-base mb-6 text-center">
+          Este formulario está diseñado para que puedas ponerte en contacto directo con el creador de FundedTools. Ya sea una duda técnica, una sugerencia o un error detectado, tu mensaje será recibido y atendido con la mayor brevedad posible.
+        </p>
+
+        <p className="text-gray-300 text-base mb-6 text-center">
           ¿Tienes alguna duda sobre las herramientas de simulación, calculadoras de trading o el funcionamiento de la web? Aquí puedes ponerte en contacto directamente conmigo.
         </p>
 

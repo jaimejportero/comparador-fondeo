@@ -1,6 +1,6 @@
-export default async function handler(req: any, res: any) {
+export default async function handler(req, res) {
   try {
-    const r = await fetch("https://newsapi.org/v2/everything?q=trading+OR+forex+OR+mercados+financieros&language=es&sortBy=publishedAt&pageSize=10&apiKey=TU_API_KEY");
+    const r = await fetch("https://newsapi.org/v2/everything?q=trading+OR+forex+OR+mercados+financieros&language=es&sortBy=publishedAt&pageSize=10&apiKey=4c4a999b4e4641cda39400740e162ac9");
     
     // Asegúrate de que la respuesta fue exitosa
     if (!r.ok) {

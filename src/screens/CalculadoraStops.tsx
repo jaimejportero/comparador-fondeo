@@ -87,10 +87,18 @@ export default function CalculadoraStops() {
   return (
     <div className="min-h-screen bg-gray-950 text-white p-4">
       <div className="max-w-3xl mx-auto bg-gray-900 p-6 rounded-2xl shadow-xl border border-gray-700">
+
         <h1 className="text-3xl font-bold text-teal-400 mb-6 text-center">
           🎯 Calculadora de Stop Loss / Take Profit
         </h1>
-
+        <div className="mb-6 text-gray-300 space-y-4 text-base leading-relaxed">
+          <p>
+            Calcular correctamente tus niveles de salida es una de las habilidades más importantes en el trading. Esta herramienta te permite determinar de forma rápida y visual tus valores ideales de <strong>Stop Loss</strong> y <strong>Take Profit</strong> en base al porcentaje de riesgo y la relación riesgo/beneficio que elijas.
+          </p>
+          <p>
+            Es especialmente útil si operas con cuentas fondeadas, donde controlar el drawdown es vital para no incumplir las reglas de gestión de riesgo de la plataforma. Además, te permite visualizar gráficamente los movimientos potenciales del mercado con velas simuladas.
+          </p>
+        </div>
         <div className="mb-8 text-gray-300 space-y-4 text-base leading-relaxed">
           <h2 className="text-xl font-bold text-white">¿Para qué sirve esta calculadora?</h2>
           <p>

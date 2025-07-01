@@ -23,10 +23,10 @@ export default function Navbar() {
   return (
     <nav className="bg-gray-900 border-b border-gray-700 shadow-md">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-<Link to="/" className="flex items-center gap-2 text-2xl font-bold text-teal-400 hover:text-white transition leading-none">
-  <span className="text-3xl">📊</span>
-  FundedTools
-</Link>
+        <Link to="/" className="flex items-center gap-2 text-2xl font-bold text-teal-400 hover:text-white transition leading-none">
+          <span className="text-3xl">📊</span>
+          FundedTools
+        </Link>
 
 
         {/* Botón hamburguesa */}
@@ -56,7 +56,6 @@ export default function Navbar() {
 function NavLinks({ linkClass }: { linkClass: (path: string) => string }) {
   return (
     <>
-      <span className="border-l border-gray-600 h-5 mx-2"></span>
       <Link to="/" className={linkClass("/")}>Qué es FundedTools</Link>
       {/* <Link to="/noticias" className={linkClass("/noticias")}>Blog</Link> */}
       <Link to="/faqs" className={linkClass("/faqs")}>Preguntas frecuentes</Link>

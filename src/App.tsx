@@ -5,7 +5,6 @@ import Footer from "./components/Footer";
 import Index from "./screens/index";
 import CalculadoraStops from "./screens/CalculadoraStops";
 import CalculadoraInteres from "./screens/CalculadoraInteres";
-import News from "./screens/New";
 import Soporte from "./screens/Soporte";
 import CalculadoraTamaño from "./screens/CalculadoraTamaño";
 import SimuladorCurvaCapital from "./screens/SimuladorCurvaCapital";
@@ -40,7 +39,6 @@ export default function App() {
           <Route path="/stops" element={<CalculadoraStops />} />
           <Route path="/tamanoPosicion" element={<CalculadoraTamaño />} />
           <Route path="/simularCurva" element={<SimuladorCurvaCapital />} />
-          <Route path="/noticias" element={<News />} />
           <Route path="/soporte" element={<Soporte />} />
           <Route path="/privacidad" element={<Privacidad />} />
           <Route path="/aviso-legal" element={<AvisoLegal />} />

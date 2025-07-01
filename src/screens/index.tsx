@@ -230,6 +230,7 @@ export default function App() {
         <meta name="robots" content="index, follow" />
         <meta name="author" content="SaludVistosa" />
       <div className="min-h-screen bg-gray-950 text-white p-4">
+        
         <Filtros filtros={filtros} setFiltros={setFiltros} />
 
       {tieneFiltrosAplicados(filtros) && (

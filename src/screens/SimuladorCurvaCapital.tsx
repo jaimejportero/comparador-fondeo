@@ -47,12 +47,21 @@ export default function SimuladorCurvaCapital() {
   return (
     <div className="min-h-screen bg-gray-950 text-white p-6">
       <div className="max-w-4xl mx-auto bg-gray-900 p-6 rounded-xl shadow-xl border border-gray-700">
+
         <h1 className="text-3xl font-bold text-teal-400 mb-6 text-center">📈 Simulador de Curva de Capital</h1>
+        <div className="mb-6 text-gray-300 text-base leading-relaxed space-y-4">
+          <p>
+            Este simulador te permite ver la evolución de tu capital a lo largo de múltiples operaciones según tu estrategia de trading. Es una herramienta perfecta para evaluar el impacto de tus parámetros de riesgo antes de aplicarlos en real.
+          </p>
+          <p>
+            Ajusta el porcentaje de riesgo por operación, el winrate (porcentaje de aciertos), el ratio riesgo/beneficio (RR) y el número total de operaciones. La simulación genera resultados aleatorios dentro de tus probabilidades, permitiéndote visualizar rachas ganadoras y perdedoras con un enfoque práctico y educativo.
+          </p>
+        </div>
 
         <div className="mb-8 text-gray-300 space-y-4 text-base leading-relaxed">
           <h2 className="text-xl font-bold text-white">¿Qué es un simulador de curva de capital?</h2>
           <p>
-            Este simulador te permite visualizar cómo evoluciona tu capital a lo largo del tiempo en función de tus parámetros de trading:
+            Permite visualizar cómo evoluciona tu capital a lo largo del tiempo en función de tus parámetros de trading:
             <strong> riesgo por operación</strong>, <strong>probabilidad de acierto (winrate)</strong>, y <strong>relación riesgo/beneficio (RR)</strong>.
           </p>
           <p>

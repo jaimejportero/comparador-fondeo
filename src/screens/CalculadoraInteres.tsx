@@ -77,7 +77,14 @@ export default function CalculadoraInteres() {
         <h1 className="text-3xl font-bold text-teal-400 mb-6 text-center">
           📈 Calculadora de Interés Compuesto
         </h1>
-
+        <div className="mb-8 text-gray-300 text-base leading-relaxed space-y-4">
+          <p>
+            Esta calculadora está diseñada para ayudarte a visualizar cómo crecería tu capital si aplicas el interés compuesto a lo largo del tiempo. Puedes ajustar la inversión inicial, la aportación mensual, el porcentaje de interés y la duración en años para simular diferentes escenarios financieros.
+          </p>
+          <p>
+            Es una herramienta ideal para quienes desean planificar su futuro financiero, ya sea para alcanzar la libertad económica, ahorrar para una gran compra o simplemente comprender cómo afecta el tiempo a una inversión bien gestionada.
+          </p>
+        </div>
         {/* Explicación educativa */}
         <div className="mb-10 text-gray-300 space-y-6 text-base leading-relaxed">
           <h2 className="text-xl font-bold text-white">¿Qué es el interés compuesto?</h2>

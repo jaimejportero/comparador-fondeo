@@ -42,7 +42,14 @@ export default function CalculadoraTamañoPosicion() {
         <h1 className="text-3xl font-bold text-teal-400 mb-6 text-center">
           📐 Calculadora de Tamaño de Posición
         </h1>
-
+        <div className="mb-6 text-gray-300 text-base leading-relaxed space-y-4">
+          <p>
+            Una correcta gestión del riesgo empieza por saber exactamente cuántas unidades puedes operar sin poner en peligro tu cuenta. Esta herramienta está pensada para ayudarte a calcular de forma rápida y precisa tu tamaño de posición ideal según tu capital, nivel de riesgo y stop loss.
+          </p>
+          <p>
+            Es especialmente útil para traders que operan con cuentas fondeadas o bajo reglas estrictas de control de drawdown. Con solo unos parámetros, sabrás cuántas unidades abrir en cada operación, ya sea en acciones, forex o criptomonedas.
+          </p>
+        </div>
         {/* Explicación educativa */}
         <div className="mb-10 text-gray-300 space-y-6 text-base leading-relaxed">
           <h2 className="text-xl font-bold text-white">

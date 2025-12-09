@@ -186,6 +186,18 @@ export default function CalculadoraInteres() {
               </ResponsiveContainer>
             </div>
 
+            {/* Total generado destacado */}
+            {/* Total acumulado destacado */}
+            {datosAnuales.length > 0 && (
+              <div className="mt-6 mb-6 p-4 bg-gray-800 rounded-xl border border-gray-700 text-center shadow-lg">
+                <h2 className="text-2xl font-bold text-teal-400 mb-2">💰 Total acumulado</h2>
+                <p className="text-4xl font-extrabold text-yellow-400">
+                  {datosAnuales[datosAnuales.length - 1].capitalAcumulado.toLocaleString()} €
+                </p>
+              </div>
+            )}
+
+            {/* Tabla de detalle anual */}
             <div className="mt-10 overflow-auto">
               <h2 className="text-xl font-bold text-teal-400 mb-4">📋 Detalle anual</h2>
               <table className="w-full text-sm text-left border border-gray-700 text-gray-300">
@@ -201,18 +213,16 @@ export default function CalculadoraInteres() {
                   {datosAnuales.map((fila, i) => (
                     <tr key={i} className="border-t border-gray-700">
                       <td className="px-3 py-2">{fila.año}</td>
-                      <td className="px-3 py-2">
-                        {fila.capitalAcumulado.toLocaleString()}
-                      </td>
+                      <td className="px-3 py-2">{fila.capitalAcumulado.toLocaleString()}</td>
                       <td className="px-3 py-2">{fila.aportado.toLocaleString()}</td>
-                      <td className="px-3 py-2 text-green-400">
-                        {fila.generado.toLocaleString()}
-                      </td>
+                      <td className="px-3 py-2 text-green-400">{fila.generado.toLocaleString()}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
+
+
           </>
         )}
       </div>

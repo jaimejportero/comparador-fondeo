@@ -1,51 +1,51 @@
-export default function TerminosCondiciones() {
+// src/pages/Terminos.tsx
+import React from "react";
+
+export default function Terminos() {
   return (
-    <div className="bg-gray-900 min-h-screen w-full text-white px-6 py-10">
-      <div className="max-w-3xl mx-auto">
-        <h1 className="text-3xl font-bold mb-6 text-teal-400">Términos y Condiciones</h1>
+    <div className="min-h-screen bg-gray-950 text-white p-6">
+      <div className="max-w-3xl mx-auto bg-gray-900 p-6 rounded-2xl shadow-xl border border-gray-700">
+        <h1 className="text-3xl font-bold text-teal-400 mb-6 text-center">
+          Términos y Condiciones – FundedTools
+        </h1>
 
         <p className="mb-4">
-          Al acceder y utilizar el sitio web <strong>FundedTools</strong>, aceptas los presentes términos y condiciones. Si no estás de acuerdo con alguno de ellos, te recomendamos no continuar navegando por este sitio.
+          Última actualización: <strong>9 de diciembre de 2025</strong>
         </p>
 
-        <h2 className="text-xl font-semibold mt-6 mb-2">1. Objeto</h2>
+        <h2 className="text-xl font-bold mt-6 mb-2">1. Aceptación de los términos</h2>
         <p className="mb-4">
-          Este sitio tiene como finalidad ofrecer herramientas y comparativas sobre cuentas fondeadas para traders. Toda la información es meramente informativa y no constituye asesoramiento financiero ni recomendación de inversión.
+          Al acceder y usar este sitio web <strong>FundedTools</strong> (https://fundedtools.vercel.app/), aceptas cumplir con estos Términos y Condiciones. Si no estás de acuerdo, por favor no uses la web.
         </p>
 
-        <h2 className="text-xl font-semibold mt-6 mb-2">2. Condiciones de uso</h2>
+        <h2 className="text-xl font-bold mt-6 mb-2">2. Uso de la web</h2>
         <p className="mb-4">
-          El usuario se compromete a hacer un uso lícito del sitio y a no llevar a cabo ninguna conducta que pudiera dañar la imagen, intereses o derechos de FundedTools o de terceros.
+          La web proporciona herramientas de cálculo para Stop Loss y Take Profit en trading. Los resultados son únicamente para fines educativos y de referencia. No garantizamos beneficios ni resultados financieros específicos.
         </p>
 
-        <h2 className="text-xl font-semibold mt-6 mb-2">3. Propiedad intelectual</h2>
+        <h2 className="text-xl font-bold mt-6 mb-2">3. Responsabilidad</h2>
         <p className="mb-4">
-          Todos los contenidos de esta web, incluidos textos, herramientas, gráficos, código y diseño, son propiedad del titular del sitio o se utilizan con la correspondiente licencia. Queda prohibida su reproducción total o parcial sin autorización expresa.
+          FundedTools no se hace responsable de pérdidas financieras que puedan derivarse del uso de la calculadora o de las decisiones tomadas basadas en la información proporcionada. El usuario asume toda responsabilidad sobre sus decisiones.
         </p>
 
-        <h2 className="text-xl font-semibold mt-6 mb-2">4. Responsabilidad</h2>
+        <h2 className="text-xl font-bold mt-6 mb-2">4. Propiedad intelectual</h2>
         <p className="mb-4">
-          FundedTools no se hace responsable del uso que los usuarios hagan de la información ofrecida, ni de posibles errores, desactualizaciones u omisiones. El usuario es el único responsable de verificar la validez y aplicabilidad de los datos.
+          Todo el contenido de FundedTools, incluyendo texto, diseño, código y gráficos, es propiedad de FundedTools o de sus respectivos autores y está protegido por leyes de propiedad intelectual. No se permite su reproducción, distribución o modificación sin autorización.
         </p>
 
-        <h2 className="text-xl font-semibold mt-6 mb-2">5. Publicidad y enlaces</h2>
+        <h2 className="text-xl font-bold mt-6 mb-2">5. Enlaces a terceros</h2>
         <p className="mb-4">
-          Este sitio puede mostrar anuncios mediante Google AdSense y contener enlaces externos a otras webs. FundedTools no se responsabiliza del contenido ni de las políticas de privacidad de dichos sitios.
+          Este sitio puede contener enlaces a otros sitios web. FundedTools no se hace responsable del contenido ni de las políticas de privacidad de sitios externos.
         </p>
 
-        <h2 className="text-xl font-semibold mt-6 mb-2">6. Protección de datos</h2>
+        <h2 className="text-xl font-bold mt-6 mb-2">6. Modificaciones</h2>
         <p className="mb-4">
-          No se recopilan datos personales salvo mediante formularios de contacto, y en ese caso, se tratarán conforme a lo indicado en nuestra <a href="/privacidad" className="underline text-teal-300">Política de Privacidad</a>.
+          FundedTools se reserva el derecho de modificar estos Términos y Condiciones en cualquier momento. Los cambios se publicarán en esta página y la fecha de última actualización se actualizará.
         </p>
 
-        <h2 className="text-xl font-semibold mt-6 mb-2">7. Modificaciones</h2>
-        <p className="mb-4">
-          FundedTools podrá modificar estos términos en cualquier momento y sin previo aviso. Se recomienda revisarlos periódicamente para estar al tanto de posibles cambios.
-        </p>
-
-        <h2 className="text-xl font-semibold mt-6 mb-2">8. Legislación aplicable</h2>
-        <p className="mb-4">
-          Estas condiciones se rigen por la legislación española. En caso de disputa, las partes se someterán a los juzgados y tribunales del domicilio del titular del sitio, salvo que la ley establezca lo contrario.
+        <h2 className="text-xl font-bold mt-6 mb-2">7. Legislación aplicable</h2>
+        <p>
+          Estos términos se rigen por la legislación vigente en España. Cualquier disputa será resuelta ante los tribunales competentes de España.
         </p>
       </div>
     </div>

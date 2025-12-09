@@ -22,7 +22,7 @@ export default function Navbar() {
 
   return (
     <nav className="bg-gray-900 border-b border-gray-700 shadow-md">
-      <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div className="max-w-9xl mx-auto px-4 py-4 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-2 text-2xl font-bold text-teal-400 hover:text-white transition leading-none">
           <span className="text-3xl">📊</span>
           FundedTools
@@ -57,14 +57,16 @@ function NavLinks({ linkClass }: { linkClass: (path: string) => string }) {
   return (
     <>
       <Link to="/" className={linkClass("/")}>Qué es FundedTools</Link>
-      {/* <Link to="/noticias" className={linkClass("/noticias")}>Blog</Link> */}
+      <Link to="/tipos_inversion" className={linkClass("/tipos_inversion")}>Tipos Inversion</Link>
+      <Link to="/herramientas" className={linkClass("/herramientas")}>Herramientas</Link>
       <Link to="/faqs" className={linkClass("/faqs")}>Preguntas frecuentes</Link>
+      <Link to="/glosario" className={linkClass("/glosario")}>Glosario</Link>
       <span className="border-l border-gray-600 h-5 mx-2"></span>
-      <Link to="/comparador" className={linkClass("/comparador")}>Comparador cuentas</Link>
-      <Link to="/interes-compuesto" className={linkClass("/interes-compuesto")}>Interés Compuesto</Link>
-      <Link to="/tamanoPosicion" className={linkClass("/tamanoPosicion")}>Tamaño de posición</Link>
-      <Link to="/stops" className={linkClass("/stops")}>Stops / TP</Link>
-      <Link to="/simularCurva" className={linkClass("/simularCurva")}>Simulador</Link>
+      <Link to="/comparador" className={linkClass("/comparador")}>Comparador cuentas fondeo</Link>
+      <Link to="/calculadora-simulador-interes" className={linkClass("/calculadora-simulador-interes")}>Interés Compuesto</Link>
+      <Link to="/calculadora-tamanoPosicion" className={linkClass("/calculadora-tamanoPosicion")}>Tamaño de posición</Link>
+      <Link to="/calculadora-stop" className={linkClass("/calculadora-stop")}>Stops / TP</Link>
+      <Link to="/simularCurva" className={linkClass("/simularCurva")}>Simulador Capital</Link>
       <span className="border-l border-gray-600 h-5 mx-2"></span>
       <Link to="/soporte" className={linkClass("/soporte")}>Soporte</Link>
     </>

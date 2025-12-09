@@ -30,7 +30,10 @@ export default function SimuladorCurvaCapital() {
     const numOps = parseInt(operaciones);
 
     if (isNaN(capital) || isNaN(riesgo) || isNaN(win) || isNaN(rr) || isNaN(numOps)) return;
-
+  if (capital <= 0 || riesgo <= 0 || win <= 0 || rr <= 0 || numOps <= 0) {
+      alert("Todos los valores deben ser mayores que 0");
+      return;
+    }
     let capitalActual = capital;
     const riesgoMonetario = capital * riesgo;
     const resultados: CapitalData[] = [{ operacion: 0, capital: capitalActual }];

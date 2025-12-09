@@ -12,17 +12,20 @@ export default function CalculadoraTamañoPosicion() {
   const calcular = () => {
     const capital = parseFloat(capitalCuenta);
     const riesgo = parseFloat(riesgoPct) / 100;
-    const stop = parseFloat(stopLoss);
+    const stopPct = parseFloat(stopLoss) / 100; // ahora stopLoss es porcentaje
     const entrada = parseFloat(precioEntrada);
 
-    if (isNaN(capital) || isNaN(riesgo) || isNaN(stop) || isNaN(entrada)) return;
-    if (stop <= 0 || riesgo <= 0 || capital <= 0 || entrada <= 0) {
+    if (isNaN(capital) || isNaN(riesgo) || isNaN(stopPct) || isNaN(entrada)) return;
+    if (stopPct <= 0 || riesgo <= 0 || capital <= 0 || entrada <= 0) {
       setAviso("⚠️ Todos los valores deben ser mayores que 0.");
       return;
     }
 
+    // convertimos porcentaje a valor absoluto del stop
+    const stopValor = entrada * stopPct;
+
     const riesgoTotal = capital * riesgo;
-    let tamaño = riesgoTotal / stop;
+    let tamaño = riesgoTotal / stopValor;
 
     const costeTotal = tamaño * entrada;
 
@@ -35,6 +38,7 @@ export default function CalculadoraTamañoPosicion() {
 
     setResultado(+tamaño.toFixed(2));
   };
+
 
   return (
     <div className="min-h-screen bg-gray-950 text-white px-6 py-12">
@@ -96,6 +100,7 @@ export default function CalculadoraTamañoPosicion() {
             <label className="block text-gray-300 mb-1">💼 Capital de la cuenta (€)</label>
             <input
               type="number"
+              placeholder="Ej: 10.000"
               value={capitalCuenta}
               onChange={(e) => setCapitalCuenta(e.target.value)}
               className="w-full p-3 rounded bg-gray-800 border border-gray-600 text-white"
@@ -105,6 +110,7 @@ export default function CalculadoraTamañoPosicion() {
             <label className="block text-gray-300 mb-1">🎯 % de riesgo por operación</label>
             <input
               type="number"
+              placeholder="Ej:2"
               value={riesgoPct}
               onChange={(e) => setRiesgoPct(e.target.value)}
               className="w-full p-3 rounded bg-gray-800 border border-gray-600 text-white"
@@ -112,11 +118,12 @@ export default function CalculadoraTamañoPosicion() {
           </div>
           <div>
             <label className="block text-gray-300 mb-1">
-              📉 Stop Loss ({tipoActivo === "forex" ? "pips" : "€ por unidad"})
+              📉 Stop Loss ({tipoActivo === "forex" ? "%" : "%"})
             </label>
             <input
               type="number"
               value={stopLoss}
+              placeholder="Ej: 2"
               onChange={(e) => setStopLoss(e.target.value)}
               className="w-full p-3 rounded bg-gray-800 border border-gray-600 text-white"
             />
@@ -126,6 +133,7 @@ export default function CalculadoraTamañoPosicion() {
             <input
               type="number"
               value={precioEntrada}
+              placeholder="Ej: 100"
               onChange={(e) => setPrecioEntrada(e.target.value)}
               className="w-full p-3 rounded bg-gray-800 border border-gray-600 text-white"
             />
@@ -140,9 +148,12 @@ export default function CalculadoraTamañoPosicion() {
         </button>
 
         {resultado !== null && (
-          <div className="mt-6 bg-gray-800 p-4 rounded-lg border border-gray-600 text-center">
-            <p className="text-xl text-green-400 font-bold">
+          <div className="mt-6 bg-gray-800 p-4 rounded-lg border border-gray-600 text-center shadow-lg">
+            <p className="text-3xl text-green-400 font-extrabold mb-2">
               🔢 Tamaño de posición recomendado: {resultado} unidades
+            </p>
+            <p className="text-lg text-teal-400 mb-2">
+              Riesgo aproximado: {(parseFloat(capitalCuenta) * parseFloat(riesgoPct) / 100).toLocaleString()} €
             </p>
             {aviso && <p className="text-yellow-400 mt-2">{aviso}</p>}
             <p className="text-sm text-gray-400 mt-2">
@@ -150,6 +161,7 @@ export default function CalculadoraTamañoPosicion() {
             </p>
           </div>
         )}
+
 
         {/* FAQ Educativa */}
         <div className="mt-12 text-gray-300 space-y-6 text-base leading-relaxed">

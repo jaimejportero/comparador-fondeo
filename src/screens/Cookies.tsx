@@ -1,45 +1,56 @@
+// src/pages/Cookies.tsx
+import React from "react";
+
 export default function Cookies() {
   return (
-    <div className="bg-gray-900 min-h-screen w-full text-white px-6 py-10">
-      <div className="max-w-3xl mx-auto">
-        <h1 className="text-3xl font-bold mb-6 text-teal-400">Política de Cookies</h1>
+    <div className="min-h-screen bg-gray-950 text-white p-6">
+      <div className="max-w-3xl mx-auto bg-gray-900 p-6 rounded-2xl shadow-xl border border-gray-700">
+        <h1 className="text-3xl font-bold text-teal-400 mb-6 text-center">
+          Política de Cookies – FundedTools
+        </h1>
 
-        {/* Intro nueva */}
-        <p className="mb-6">
-          Esta página describe el uso de cookies en el sitio web <strong>FundedTools</strong>. Al navegar por nuestras páginas, aceptas el uso de cookies según se detalla en esta política. Nos comprometemos a proteger tu privacidad y ofrecer transparencia sobre cómo recopilamos y utilizamos tus datos.
+        <p className="mb-4">
+          Última actualización: <strong>9 de diciembre de 2025</strong>
         </p>
 
         <p className="mb-4">
-          Este sitio utiliza cookies propias y de terceros para mejorar tu experiencia como usuario, personalizar contenido y mostrarte anuncios relevantes a través de plataformas como Google AdSense.
+          En <strong>FundedTools</strong> (https://fundedtools.vercel.app/) usamos cookies para mejorar la experiencia del usuario, analizar el tráfico y mostrar anuncios relevantes si habilitas Google AdSense.
         </p>
 
-        <h2 className="text-xl font-semibold mt-6 mb-2">¿Qué son las cookies?</h2>
+        <h2 className="text-xl font-bold mt-6 mb-2">1. ¿Qué son las cookies?</h2>
         <p className="mb-4">
-          Las cookies son pequeños archivos de texto que se almacenan en tu navegador cuando visitas una página web. Permiten reconocer tu dispositivo, recordar tus preferencias y ofrecer una experiencia de navegación más fluida y adaptada.
+          Las cookies son pequeños archivos de texto que se almacenan en tu navegador cuando visitas un sitio web. Permiten que la web recuerde tus preferencias y actividades.
         </p>
 
-        <h2 className="text-xl font-semibold mt-6 mb-2">Tipos de cookies que utilizamos</h2>
-        <ul className="list-disc pl-6 mb-4 space-y-1">
-          <li><strong>Cookies técnicas necesarias:</strong> esenciales para el funcionamiento correcto del sitio.</li>
-          <li><strong>Cookies de análisis:</strong> utilizadas para recopilar datos estadísticos anónimos sobre el uso del sitio (por ejemplo, Google Analytics).</li>
-          <li><strong>Cookies publicitarias:</strong> gestionadas por terceros como Google AdSense, que permiten mostrar anuncios relevantes según tu historial de navegación.</li>
+        <h2 className="text-xl font-bold mt-6 mb-2">2. Cookies que usamos</h2>
+        <ul className="list-disc list-inside mb-4">
+          <li>
+            <strong>Cookies esenciales:</strong> necesarias para el funcionamiento básico de la web.
+          </li>
+          <li>
+            <strong>Cookies de analítica:</strong> para medir el uso de la web mediante Google Analytics.
+          </li>
+          <li>
+            <strong>Cookies de publicidad:</strong> utilizadas por Google AdSense para mostrar anuncios relevantes según tus intereses.
+          </li>
         </ul>
 
-        <h2 className="text-xl font-semibold mt-6 mb-2">¿Cómo puedes gestionar las cookies?</h2>
+        <h2 className="text-xl font-bold mt-6 mb-2">3. Gestión y desactivación</h2>
         <p className="mb-4">
-          Puedes aceptar o rechazar el uso de cookies a través del banner de consentimiento al entrar en el sitio. Además, puedes eliminar o bloquear las cookies desde la configuración de tu navegador. Ten en cuenta que, si las desactivas, algunas funciones pueden dejar de estar disponibles o comportarse de manera inesperada.
+          Puedes aceptar, rechazar o eliminar cookies mediante la configuración de tu navegador. Ten en cuenta que desactivar cookies puede afectar la funcionalidad de algunas secciones de la web.
         </p>
 
-        <p className="text-sm text-gray-400">
-          Para obtener más información sobre cómo Google usa cookies en sus servicios publicitarios, puedes visitar{" "}
-          <a
-            href="https://policies.google.com/technologies/ads"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-teal-400 underline"
-          >
-            este enlace oficial
-          </a>.
+        <h2 className="text-xl font-bold mt-6 mb-2">4. Enlaces de interés</h2>
+        <p className="mb-4">
+          Para más información sobre las cookies de Google y cómo gestionarlas, visita:{" "}
+          <a className="text-teal-400 underline" href="https://policies.google.com/technologies/cookies" target="_blank" rel="noreferrer">
+            https://policies.google.com/technologies/cookies
+          </a>
+        </p>
+
+        <h2 className="text-xl font-bold mt-6 mb-2">5. Cambios en esta política</h2>
+        <p>
+          FundedTools se reserva el derecho de modificar esta política de cookies en cualquier momento. Los cambios se publicarán en esta página.
         </p>
       </div>
     </div>

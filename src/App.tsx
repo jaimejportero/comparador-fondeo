@@ -16,7 +16,9 @@ import CookieBanner from "./components/CookieBanner";
 import Sobre from "./screens/Sobre";
 import Faqs from "./screens/Faqs";
 import NotFound from "./screens/NotFound";
-
+import Herramientas from "./screens/Herramientas";
+import Glosario from "./screens/Glosario";
+import TiposInversion from "./screens/TiposInversion";
 export default function App() {
   useEffect(() => {
     const script = document.createElement("script");
@@ -35,15 +37,19 @@ export default function App() {
           <Route path="/" element={<Sobre />} />
           <Route path="/comparador" element={<Index />} />
           <Route path="/faqs" element={<Faqs />} />
-          <Route path="/interes-compuesto" element={<CalculadoraInteres />} />
-          <Route path="/stops" element={<CalculadoraStops />} />
-          <Route path="/tamanoPosicion" element={<CalculadoraTamaño />} />
+          <Route path="/calculadora-simulador-interes" element={<CalculadoraInteres />} />
+          <Route path="/calculadora-stop" element={<CalculadoraStops />} />
+          <Route path="/calculadora-tamanoPosicion" element={<CalculadoraTamaño />} />
           <Route path="/simularCurva" element={<SimuladorCurvaCapital />} />
           <Route path="/soporte" element={<Soporte />} />
           <Route path="/privacidad" element={<Privacidad />} />
           <Route path="/aviso-legal" element={<AvisoLegal />} />
           <Route path="/cookies" element={<Cookies />} />
           <Route path="/terminos-condiciones" element={<TerminosCondiciones />} />
+          <Route path="/herramientas" element={<Herramientas />} />
+          <Route path="/glosario" element={<Glosario />} />
+          <Route path="/tipos_inversion" element={<TiposInversion />} />
+
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

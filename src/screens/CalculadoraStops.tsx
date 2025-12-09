@@ -23,9 +23,9 @@ interface Vela {
 }
 
 export default function CalculadoraStops() {
-  const [entrada, setEntrada] = useState(0);
-  const [riesgoPct, setRiesgoPct] = useState(0);
-  const [relacion, setRelacion] = useState(2);
+  const [entrada, setEntrada] = useState("");
+  const [riesgoPct, setRiesgoPct] = useState("");
+  const [relacion, setRelacion] = useState("");
   const [resultado, setResultado] = useState<{
     stop: number;
     take: number;
@@ -42,7 +42,10 @@ export default function CalculadoraStops() {
     const rr = parseFloat(relacion.toString());
 
     if (isNaN(precio) || isNaN(riesgo) || isNaN(rr)) return;
-
+    if (precio <= 0 || riesgo <= 0 || rr <= 0) {
+      alert("Todos los valores deben ser mayores que 0");
+      return;
+    }
     const stop = +(precio - precio * riesgo).toFixed(2);
     const take = +(precio + precio * riesgo * rr).toFixed(2);
 
@@ -119,19 +122,27 @@ export default function CalculadoraStops() {
         <div className="grid gap-4 mb-6">
           <div>
             <label className="block mb-1 text-gray-300">💵 Precio de entrada</label>
+
             <input
               type="number"
+              step="any" // permite decimales
               value={entrada}
-              onChange={(e) => setEntrada(+e.target.value)}
+              placeholder="Ej: 150"
+
+              onChange={(e) => setEntrada(e.target.value)}
               className="w-full bg-gray-800 border border-gray-600 rounded p-2 text-white"
             />
+
           </div>
           <div>
             <label className="block mb-1 text-gray-300">📉 % de riesgo</label>
             <input
               type="number"
+              step="any" // permite decimales
+              placeholder="Ej: 2"
+
               value={riesgoPct}
-              onChange={(e) => setRiesgoPct(+e.target.value)}
+              onChange={(e) => setRiesgoPct(e.target.value)}
               className="w-full bg-gray-800 border border-gray-600 rounded p-2 text-white"
             />
           </div>
@@ -140,7 +151,9 @@ export default function CalculadoraStops() {
             <input
               type="number"
               value={relacion}
-              onChange={(e) => setRelacion(+e.target.value)}
+              placeholder="Ej: 2"
+
+              onChange={(e) => setRelacion(e.target.value)}
               className="w-full bg-gray-800 border border-gray-600 rounded p-2 text-white"
             />
           </div>
@@ -170,8 +183,12 @@ export default function CalculadoraStops() {
                   <XAxis dataKey="name" stroke="#ccc" />
                   <YAxis
                     stroke="#ccc"
-                    domain={[resultado.stop * 0.98, resultado.take * 1.02]}
+                    domain={[
+                      Number((resultado.stop * 0.98).toFixed(2)),
+                      Number((resultado.take * 1.02).toFixed(2))
+                    ]}
                   />
+
                   <Tooltip
                     contentStyle={{
                       backgroundColor: "#222",

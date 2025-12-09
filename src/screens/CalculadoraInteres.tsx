@@ -116,6 +116,7 @@ export default function CalculadoraInteres() {
             <label className="block mb-1 text-gray-300">Capital inicial (€)</label>
             <input
               type="number"
+              placeholder="Ej: 1.000"
               value={capitalInicial}
               onChange={(e) => setCapitalInicial(e.target.value)}
               className="w-full bg-gray-800 border border-gray-600 rounded p-2 text-white"
@@ -126,6 +127,8 @@ export default function CalculadoraInteres() {
             <input
               type="number"
               value={mensual}
+              placeholder="Ej: 350"
+
               onChange={(e) => setMensual(e.target.value)}
               className="w-full bg-gray-800 border border-gray-600 rounded p-2 text-white"
             />
@@ -135,6 +138,7 @@ export default function CalculadoraInteres() {
             <input
               type="number"
               value={interes}
+              placeholder="Ej: 5,5"
               onChange={(e) => setInteres(e.target.value)}
               className="w-full bg-gray-800 border border-gray-600 rounded p-2 text-white"
             />
@@ -143,6 +147,7 @@ export default function CalculadoraInteres() {
             <label className="block mb-1 text-gray-300">Duración (años)</label>
             <input
               type="number"
+              placeholder="Ej: 10"
               value={años}
               onChange={(e) => setAños(e.target.value)}
               className="w-full bg-gray-800 border border-gray-600 rounded p-2 text-white"

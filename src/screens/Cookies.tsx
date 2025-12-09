@@ -1,6 +1,3 @@
-// src/pages/Cookies.tsx
-import React from "react";
-
 export default function Cookies() {
   return (
     <div className="min-h-screen bg-gray-950 text-white p-6">

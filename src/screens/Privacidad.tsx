@@ -1,6 +1,4 @@
 // src/pages/Privacidad.tsx
-import React from "react";
-
 export default function Privacidad() {
   return (
     <div className="min-h-screen bg-gray-950 text-white p-6">

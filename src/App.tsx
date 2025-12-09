@@ -16,9 +16,10 @@ import CookieBanner from "./components/CookieBanner";
 import Sobre from "./screens/Sobre";
 import Faqs from "./screens/Faqs";
 import NotFound from "./screens/NotFound";
-import Herramientas from "./screens/Herramientas";
 import Glosario from "./screens/Glosario";
 import TiposInversion from "./screens/TiposInversion";
+import Herramientas from "./screens/Herramientas";
+
 export default function App() {
   useEffect(() => {
     const script = document.createElement("script");

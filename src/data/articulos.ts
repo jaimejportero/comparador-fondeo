@@ -17,8 +17,8 @@ export const articulos: Articulo[] = [
     slug: "que-es-una-prop-firm",
     titulo: "¿Qué es una Prop Firm y cómo funciona el trading con capital financiado?",
     descripcion:
-      "Descubre qué es una prop firm, cómo funcionan los retos de fondeo y si operar con capital financiado merece la pena en 2025.",
-    fecha: "2025-01-10",
+      "Descubre qué es una prop firm, cómo funcionan los retos de fondeo y si operar con capital financiado merece la pena en 2026.",
+    fecha: "2026-01-10",
     categoria: "Prop Firms",
     tiempoLectura: "6 min",
     contenido: `
@@ -51,7 +51,7 @@ export const articulos: Articulo[] = [
     titulo: "Gestión del riesgo en trading: la clave que separa a los traders rentables",
     descripcion:
       "Aprende a calcular el tamaño de posición, el stop loss y el ratio riesgo/beneficio para proteger tu capital como un trader profesional.",
-    fecha: "2025-01-18",
+    fecha: "2026-01-18",
     categoria: "Gestión del Riesgo",
     tiempoLectura: "7 min",
     contenido: `
@@ -83,7 +83,7 @@ export const articulos: Articulo[] = [
     titulo: "Interés compuesto en trading: cómo hacer crecer una cuenta paso a paso",
     descripcion:
       "El interés compuesto es la herramienta más poderosa para hacer crecer tu capital en trading. Aprende cómo funciona y simula tu curva de crecimiento.",
-    fecha: "2025-01-25",
+    fecha: "2026-01-25",
     categoria: "Educación Financiera",
     tiempoLectura: "6 min",
     contenido: `
@@ -108,7 +108,7 @@ export const articulos: Articulo[] = [
     titulo: "Qué es el drawdown y cómo afecta a tu cuenta de trading",
     descripcion:
       "Entiende qué es el drawdown en trading, cómo se calcula y por qué controlarlo es fundamental para sobrevivir en los mercados financieros.",
-    fecha: "2025-02-03",
+    fecha: "2026-02-03",
     categoria: "Gestión del Riesgo",
     tiempoLectura: "5 min",
     contenido: `
@@ -135,10 +135,10 @@ export const articulos: Articulo[] = [
   },
   {
     slug: "mejores-indicadores-tecnicos",
-    titulo: "Los mejores indicadores técnicos para trading en 2025 (y cómo usarlos)",
+    titulo: "Los mejores indicadores técnicos para trading en 2026 (y cómo usarlos)",
     descripcion:
       "Guía completa sobre los indicadores técnicos más usados en trading: medias móviles, RSI, MACD, ATR y Bandas de Bollinger con ejemplos prácticos.",
-    fecha: "2025-02-12",
+    fecha: "2026-02-12",
     categoria: "Análisis Técnico",
     tiempoLectura: "8 min",
     contenido: `
@@ -168,7 +168,7 @@ export const articulos: Articulo[] = [
     titulo: "Psicología del trading: por qué la mente es tu mayor enemigo",
     descripcion:
       "Los errores psicológicos son la causa número uno de fracaso en trading. Aprende a controlar el miedo, la codicia y el tilt para operar con disciplina.",
-    fecha: "2025-02-20",
+    fecha: "2026-02-20",
     categoria: "Psicología",
     tiempoLectura: "7 min",
     contenido: `
@@ -205,7 +205,7 @@ export const articulos: Articulo[] = [
     titulo: "Cómo hacer backtesting de una estrategia de trading paso a paso",
     descripcion:
       "Aprende qué es el backtesting en trading, cómo realizarlo correctamente y qué métricas analizar para validar tu estrategia antes de operar con dinero real.",
-    fecha: "2025-03-01",
+    fecha: "2026-03-01",
     categoria: "Estrategia",
     tiempoLectura: "8 min",
     contenido: `
@@ -243,7 +243,7 @@ export const articulos: Articulo[] = [
     titulo: "Trading de oro (XAUUSD): características, estrategias y gestión del riesgo",
     descripcion:
       "Guía completa para operar XAUUSD: por qué el oro es uno de los activos más operados, cómo funciona su volatilidad y qué estrategias usar.",
-    fecha: "2025-03-10",
+    fecha: "2026-03-10",
     categoria: "Mercados",
     tiempoLectura: "7 min",
     contenido: `
@@ -277,14 +277,14 @@ export const articulos: Articulo[] = [
   },
   {
     slug: "como-elegir-prop-firm",
-    titulo: "Cómo elegir la mejor prop firm en 2025: criterios que deberías analizar",
+    titulo: "Cómo elegir la mejor prop firm en 2026: criterios que deberías analizar",
     descripcion:
       "No todas las prop firms son iguales. Te explicamos qué criterios analizar para elegir la empresa de fondeo que mejor se adapta a tu estilo de trading.",
-    fecha: "2025-03-18",
+    fecha: "2026-03-18",
     categoria: "Prop Firms",
     tiempoLectura: "7 min",
     contenido: `
-      <p>Con más de 100 prop firms operando en el mercado en 2025, elegir la correcta puede parecer abrumador. En este artículo te damos el marco analítico para tomar esa decisión con criterio.</p>
+      <p>Con más de 100 prop firms operando en el mercado en 2026, elegir la correcta puede parecer abrumador. En este artículo te damos el marco analítico para tomar esa decisión con criterio.</p>
 
       <h2>1. Reputación y trayectoria</h2>
       <p>Verifica que la empresa es real y tiene historial de pagos. Busca en Trustpilot, Reddit y YouTube testimonios de traders que hayan cobrado. Una prop firm nueva sin reviews es una señal de cautela.</p>
@@ -309,15 +309,15 @@ export const articulos: Articulo[] = [
     `,
   },
   {
-    slug: "ftmo-vs-alternativas-2025",
-    titulo: "FTMO vs otras prop firms: ¿sigue siendo la mejor opción en 2025?",
+    slug: "ftmo-vs-alternativas-2026",
+    titulo: "FTMO vs otras prop firms: ¿sigue siendo la mejor opción en 2026?",
     descripcion:
-      "FTMO es la prop firm más conocida del mundo, pero en 2025 la competencia es feroz. Analizamos si sigue siendo la mejor opción o si existen alternativas superiores.",
-    fecha: "2025-03-20",
+      "FTMO es la prop firm más conocida del mundo, pero en 2026 la competencia es feroz. Analizamos si sigue siendo la mejor opción o si existen alternativas superiores.",
+    fecha: "2026-03-20",
     categoria: "Prop Firms",
     tiempoLectura: "6 min",
     contenido: `
-      <p>FTMO lleva años siendo el referente absoluto del sector de las prop firms. Fundada en República Checa en 2015, ha pagado millones de dólares en beneficios a traders de todo el mundo. Pero en 2025 la competencia ha crecido enormemente. ¿Sigue siendo FTMO la mejor opción?</p>
+      <p>FTMO lleva años siendo el referente absoluto del sector de las prop firms. Fundada en República Checa en 2015, ha pagado millones de dólares en beneficios a traders de todo el mundo. Pero en 2026 la competencia ha crecido enormemente. ¿Sigue siendo FTMO la mejor opción?</p>
 
       <h2>Por qué FTMO sigue siendo referente</h2>
       <ul>
@@ -327,7 +327,7 @@ export const articulos: Articulo[] = [
         <li><strong>Cuenta demo gratuita:</strong> puedes practicar con condiciones similares al reto sin pagar.</li>
       </ul>
 
-      <h2>Los puntos débiles de FTMO en 2025</h2>
+      <h2>Los puntos débiles de FTMO en 2026</h2>
       <ul>
         <li>Precio del reto más elevado que la media del sector.</li>
         <li>Reglas más estrictas en trading de noticias y otros aspectos operativos.</li>

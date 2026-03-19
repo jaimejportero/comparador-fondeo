@@ -1,19 +1,26 @@
-import type { CuentaFondeada } from "./types"; // ajusta el path si lo tienes en otro sitio
-
-// ⚠️ CAMBIOS RESPECTO A TU VERSIÓN ORIGINAL:
-// - My Forex Funds ELIMINADA: cerrada por reguladores en agosto 2023, caso CFTC
-// - FTMO: precios actualizados (€155-€1080), capitales corregidos (sin 30k ni 80k ni 160k)
-// - FTMO: mantiene_finde FALSE en cuenta Normal (solo Swing permite fin de semana en funded)
-// - The5ers: precios actualizados, capitales corregidos, mantiene_finde TRUE
-// - Noctorial: precios actualizados (€59-€1249), drawdown total corregido a 8%
-// - E8 Funding: mantiene_finde TRUE (sí permite fin de semana en evaluación)
-// - FXIFY: capitales y precios actualizados, max capital $400k
+export interface CuentaFondeada {
+  nombre: string;
+  capitales: number[];
+  precios: number[];
+  tiempoFase: string;
+  tiempoFaseTipo?: "ilimitado" | "30-60" | "otro";
+  objetivo_fase1: number;
+  objetivo_fase2: number;
+  dias_min_fase1?: number;
+  dias_min_fase2?: number;
+  precio_original?: number;
+  fase_unica?: boolean;
+  mantiene_finde: boolean;
+  activos: string[];
+  perdidas_max_diaria?: number;
+  perdidas_max_total?: number;
+}
 
 export const cuentasData: CuentaFondeada[] = [
   {
     nombre: "FTMO",
     capitales: [10000, 25000, 50000, 100000, 200000],
-    precios: [155, 250, 345, 540, 1080], // EUR, precios estándar 2026
+    precios: [155, 250, 345, 540, 1080],
     tiempoFase: "Ilimitado (mín. 4 días por fase)",
     tiempoFaseTipo: "ilimitado",
     objetivo_fase1: 10,
@@ -21,7 +28,7 @@ export const cuentasData: CuentaFondeada[] = [
     dias_min_fase1: 4,
     dias_min_fase2: 4,
     fase_unica: false,
-    mantiene_finde: false, // cuenta Normal no permite finde en funded; Swing sí (cuenta aparte)
+    mantiene_finde: false,
     activos: ["Forex", "Índices", "Materias primas", "Criptomonedas", "Acciones"],
     perdidas_max_diaria: 5,
     perdidas_max_total: 10
@@ -40,11 +47,10 @@ export const cuentasData: CuentaFondeada[] = [
     perdidas_max_diaria: 5,
     perdidas_max_total: 8
   },
-  // ❌ My Forex Funds ELIMINADA — cerrada por la CFTC en agosto 2023
   {
     nombre: "Noctorial",
     capitales: [5000, 10000, 25000, 50000, 100000, 250000],
-    precios: [59, 99, 199, 275, 499, 1249], // EUR, actualizados 2026
+    precios: [59, 99, 199, 275, 499, 1249],
     tiempoFase: "Ilimitado tras días mínimos",
     tiempoFaseTipo: "ilimitado",
     objetivo_fase1: 8,
@@ -55,21 +61,21 @@ export const cuentasData: CuentaFondeada[] = [
     mantiene_finde: true,
     activos: ["Forex", "Índices", "Materias primas", "Criptomonedas", "Acciones"],
     perdidas_max_diaria: 5,
-    perdidas_max_total: 8 // drawdown total es 8% en Noctorial, no 10%
+    perdidas_max_total: 8
   },
   {
     nombre: "The5ers",
     capitales: [5000, 10000, 20000, 60000, 100000],
-    precios: [39, 69, 119, 199, 299], // USD, programa High Stakes 2026
+    precios: [39, 69, 119, 199, 299],
     tiempoFase: "Ilimitado",
     tiempoFaseTipo: "ilimitado",
     objetivo_fase1: 8,
     objetivo_fase2: 5,
-    dias_min_fase1: 3, // 3 días rentables mínimo
+    dias_min_fase1: 3,
     dias_min_fase2: 3,
     fase_unica: false,
-    mantiene_finde: true, // permite overnight y fin de semana
-    activos: ["Forex", "Índices", "Metales", "Oil", "Criptomonedas"],
+    mantiene_finde: true,
+    activos: ["Forex", "Índices", "Metales", "Materias primas", "Criptomonedas"],
     perdidas_max_diaria: 5,
     perdidas_max_total: 10
   },
@@ -90,7 +96,7 @@ export const cuentasData: CuentaFondeada[] = [
   {
     nombre: "Axi Select",
     capitales: [500000, 1000000],
-    precios: [0], // sin coste de entrada
+    precios: [0],
     tiempoFase: "Varias etapas por Edge Score",
     objetivo_fase1: 5,
     objetivo_fase2: 5,
@@ -159,7 +165,7 @@ export const cuentasData: CuentaFondeada[] = [
   {
     nombre: "FXIFY",
     capitales: [5000, 10000, 25000, 50000, 100000, 200000, 400000],
-    precios: [39, 69, 149, 249, 449, 799, 1399], // precios actualizados 2026
+    precios: [39, 69, 149, 249, 449, 799, 1399],
     tiempoFase: "Ilimitado",
     tiempoFaseTipo: "ilimitado",
     objetivo_fase1: 10,

@@ -1,6 +1,12 @@
 import { useState } from "react";
+import { usePageMeta } from "../hooks/usePageMeta";
 
 export default function PaginaContacto() {
+  usePageMeta({
+    title: "Contacto y Soporte | FundedTools",
+    description:
+      "¿Tienes dudas, sugerencias o encontraste un error? Contacta con el equipo de FundedTools. Te respondemos en menos de 24 horas.",
+  });
   const [nombre, setNombre] = useState("");
   const [email, setEmail] = useState("");
   const [mensaje, setMensaje] = useState("");

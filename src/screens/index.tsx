@@ -2,6 +2,7 @@ import { useState } from "react";
 import { cuentasData } from "../data/cuentas";
 import { CuentaCard } from "../components/CuentaCard";
 import { Filtros } from "../components/Filtros";
+import { usePageMeta } from "../hooks/usePageMeta";
 
 const tieneFiltrosAplicados = (filtros: any) => {
   return (
@@ -177,6 +178,11 @@ const preguntasFrecuentes = [
 ];
 
 export default function App() {
+  usePageMeta({
+    title: "Comparador de Cuentas Fondeadas 2025 | FundedTools",
+    description:
+      "Compara las mejores prop firms de 2025: FTMO, The5ers, Noctorial, FXIFY y más. Filtra por precio, capital, fases y activos. Gratis y sin registro.",
+  });
   const [filtros, setFiltros] = useState({
     capitalMinimo: 0,
     precioMaximo: 3000,
@@ -223,77 +229,77 @@ export default function App() {
 
   return (
     <>
-        <title>Comparador de Cuentas Fondeadas 2025 | Mejores cuentas de trading fondeado</title>
-        <meta name="description" content="Compara las mejores cuentas fondeadas para traders en 2025. Filtra por precio, capital, activos, fases y más. ¡Encuentra tu cuenta ideal!" />
-        <meta name="keywords" content="cuentas fondeadas, trading fondeado, prop firms, evaluación trading, cuentas de trading 2025, FTMO, The5ers, FXIFY, mejores cuentas fondeo" />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="SaludVistosa" />
+      <title>Comparador de Cuentas Fondeadas 2025 | Mejores cuentas de trading fondeado</title>
+      <meta name="description" content="Compara las mejores cuentas fondeadas para traders en 2025. Filtra por precio, capital, activos, fases y más. ¡Encuentra tu cuenta ideal!" />
+      <meta name="keywords" content="cuentas fondeadas, trading fondeado, prop firms, evaluación trading, cuentas de trading 2025, FTMO, The5ers, FXIFY, mejores cuentas fondeo" />
+      <meta name="robots" content="index, follow" />
+      <meta name="author" content="SaludVistosa" />
 
       <div className="min-h-screen bg-gray-950 text-white p-4">
-        
+
         <Filtros filtros={filtros} setFiltros={setFiltros} />
 
-      {tieneFiltrosAplicados(filtros) && (
-        <>
-          {cuentasFiltradas.length === 0 ? (
-            <p className="text-center text-red-400 mt-8">No hay cuentas que cumplan esos criterios.</p>
-          ) : (
-            <>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {cuentasFiltradas.map((cuenta, idx) => (
-                  <CuentaCard key={idx} cuenta={cuenta} />
-                ))}
-              </div>
-
-
-              <div className="mt-10">
-                <h2 className="text-2xl font-bold text-teal-400 mb-4">Estadísticas del mercado</h2>
-                <p className="text-gray-300 mb-4">Estas plataformas son las más populares entre traders fondeados:</p>
-                <ul className="list-disc pl-6 text-gray-300">
-                  {plataformasSeleccionadas.map((nombre, idx) => (
-                    <li key={idx}>{nombre} — Uso estimado: {usoEstimado[nombre] ?? 0}%</li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="mt-10">
-                <h2 className="text-2xl font-bold text-teal-400 mb-4">Opiniones reales de traders</h2>
-                <div className="grid gap-6 md:grid-cols-2">
-                  {plataformasSeleccionadas.map((plataforma, idx) => (
-                    <div key={idx} className="bg-gray-800 rounded-xl p-4 border border-gray-600">
-                      <h3 className="text-lg font-semibold text-white mb-2">{plataforma}</h3>
-                      {reseñasPorPlataforma[plataforma]?.map((texto, i) => (
-                        <p key={i} className={
-                          i === 0 ? "text-green-400 text-sm mb-2" :
-                            i === 1 ? "text-yellow-400 text-sm mb-2" :
-                              "text-red-400 text-sm"
-                        }>
-                          “{texto}”
-                        </p>
-                      ))}
-                    </div>
+        {tieneFiltrosAplicados(filtros) && (
+          <>
+            {cuentasFiltradas.length === 0 ? (
+              <p className="text-center text-red-400 mt-8">No hay cuentas que cumplan esos criterios.</p>
+            ) : (
+              <>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {cuentasFiltradas.map((cuenta, idx) => (
+                    <CuentaCard key={idx} cuenta={cuenta} />
                   ))}
                 </div>
-              </div>
 
 
-            </>
-          )}
+                <div className="mt-10">
+                  <h2 className="text-2xl font-bold text-teal-400 mb-4">Estadísticas del mercado</h2>
+                  <p className="text-gray-300 mb-4">Estas plataformas son las más populares entre traders fondeados:</p>
+                  <ul className="list-disc pl-6 text-gray-300">
+                    {plataformasSeleccionadas.map((nombre, idx) => (
+                      <li key={idx}>{nombre} — Uso estimado: {usoEstimado[nombre] ?? 0}%</li>
+                    ))}
+                  </ul>
+                </div>
 
-        </>
-      )}
-      <div className="mt-10">
-        <h2 className="text-2xl font-bold text-teal-400 mb-4 text-center">Preguntas Frecuentes</h2>
-        <div className="grid gap-4 text-gray-300 max-w-4xl mx-auto">
-          {preguntasFrecuentes.map((faq, idx) => (
-            <details key={idx} className="bg-gray-800 p-4 rounded-md border border-gray-700">
-              <summary className="cursor-pointer font-semibold text-white">{faq.pregunta}</summary>
-              <p className="mt-2 text-gray-300">{faq.respuesta}</p>
-            </details>
-          ))}
+                <div className="mt-10">
+                  <h2 className="text-2xl font-bold text-teal-400 mb-4">Opiniones reales de traders</h2>
+                  <div className="grid gap-6 md:grid-cols-2">
+                    {plataformasSeleccionadas.map((plataforma, idx) => (
+                      <div key={idx} className="bg-gray-800 rounded-xl p-4 border border-gray-600">
+                        <h3 className="text-lg font-semibold text-white mb-2">{plataforma}</h3>
+                        {reseñasPorPlataforma[plataforma]?.map((texto, i) => (
+                          <p key={i} className={
+                            i === 0 ? "text-green-400 text-sm mb-2" :
+                              i === 1 ? "text-yellow-400 text-sm mb-2" :
+                                "text-red-400 text-sm"
+                          }>
+                            “{texto}”
+                          </p>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+
+              </>
+            )}
+
+          </>
+        )}
+        <div className="mt-10">
+          <h2 className="text-2xl font-bold text-teal-400 mb-4 text-center">Preguntas Frecuentes</h2>
+          <div className="grid gap-4 text-gray-300 max-w-4xl mx-auto">
+            {preguntasFrecuentes.map((faq, idx) => (
+              <details key={idx} className="bg-gray-800 p-4 rounded-md border border-gray-700">
+                <summary className="cursor-pointer font-semibold text-white">{faq.pregunta}</summary>
+                <p className="mt-2 text-gray-300">{faq.respuesta}</p>
+              </details>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
     </>
   );
 }

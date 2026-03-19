@@ -1,7 +1,13 @@
 import { useEffect } from "react";
 import stopsImg from "../imagenes/stops.png";
+import { usePageMeta } from "../hooks/usePageMeta";
 
 export default function Sobre() {
+  usePageMeta({
+  title: "Sobre FundedTools | Comparador de Prop Firms gratuito",
+  description:
+    "FundedTools es una plataforma independiente con herramientas gratuitas para traders: comparador de prop firms, calculadoras de riesgo y simuladores de capital.",
+});
   useEffect(() => {
     document.title = "Sobre FundedTools – Comparativa de cuentas fondeadas y herramientas para traders";
 

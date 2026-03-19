@@ -1,3 +1,5 @@
+import { usePageMeta } from "../hooks/usePageMeta";
+
 const tipos = [
   {
     nombre: "Acciones",
@@ -77,6 +79,11 @@ const tipos = [
 ];
 
 export default function TiposInversion() {
+  usePageMeta({
+    title: "Tipos de Inversión: Acciones, ETFs, Forex y Cripto | FundedTools",
+    description:
+      "Guía completa sobre las diferentes formas de inversión: acciones, ETFs, fondos indexados, forex y criptomonedas. Ventajas, desventajas y ejemplos reales.",
+  });
   return (
     <div className="min-h-screen bg-gray-950 text-white p-6 space-y-12">
       <div className="max-w-6xl mx-auto space-y-8">

@@ -2,8 +2,14 @@ import { Link } from "react-router-dom";
 import posicionImg from "../imagenes/tamano.png";
 import stopImg from "../imagenes/stops.png";
 import interesCompuestoImg from "../imagenes/interes.png";
+import { usePageMeta } from "../hooks/usePageMeta";
 
 export default function Herramientas() {
+  usePageMeta({
+    title: "Herramientas para Traders | Calculadoras gratuitas | FundedTools",
+    description:
+      "Calculadora de tamaño de posición, stop loss, take profit e interés compuesto. Herramientas gratuitas para traders con cuentas fondeadas.",
+  });
   const herramientas = [
     {
       id: 1,

@@ -57,6 +57,7 @@ function NavLinks({ linkClass }: { linkClass: (path: string) => string }) {
   return (
     <>
       <Link to="/" className={linkClass("/")}>Qué es FundedTools</Link>
+      <Link to="/blog" className={linkClass("/blog")}>Blog</Link>
       <Link to="/tipos_inversion" className={linkClass("/tipos_inversion")}>Tipos Inversion</Link>
       <Link to="/herramientas" className={linkClass("/herramientas")}>Herramientas</Link>
       <Link to="/faqs" className={linkClass("/faqs")}>Preguntas frecuentes</Link>

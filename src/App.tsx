@@ -19,15 +19,24 @@ import NotFound from "./screens/NotFound";
 import Glosario from "./screens/Glosario";
 import TiposInversion from "./screens/TiposInversion";
 import Herramientas from "./screens/Herramientas";
+import Blog from "./screens/Blog";
+import Articulo from "./screens/Articulo";
+import { useCookieConsent } from "./hooks/useCookieConsent";
 
 export default function App() {
+  const { consent } = useCookieConsent();
+
   useEffect(() => {
+    if (consent !== "accepted") return;
+    if (document.querySelector('script[data-adsense]')) return;
+
     const script = document.createElement("script");
     script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1110746265632999";
     script.async = true;
     script.crossOrigin = "anonymous";
+    script.setAttribute("data-adsense", "true");
     document.head.appendChild(script);
-  }, []);
+  }, [consent]);
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-900">
@@ -50,7 +59,8 @@ export default function App() {
           <Route path="/herramientas" element={<Herramientas />} />
           <Route path="/glosario" element={<Glosario />} />
           <Route path="/tipos_inversion" element={<TiposInversion />} />
-
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<Articulo />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

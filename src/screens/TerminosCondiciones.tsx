@@ -1,5 +1,11 @@
 // src/pages/Terminos.tsx
+import { usePageMeta } from "../hooks/usePageMeta";
+
 export default function Terminos() {
+  usePageMeta({
+    title: "Términos y Condiciones | FundedTools",
+    description: "Términos y condiciones de uso de FundedTools. Condiciones de acceso, responsabilidad y propiedad intelectual.",
+  });
   return (
     <div className="min-h-screen bg-gray-950 text-white p-6">
       <div className="max-w-3xl mx-auto bg-gray-900 p-6 rounded-2xl shadow-xl border border-gray-700">

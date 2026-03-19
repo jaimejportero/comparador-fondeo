@@ -1,13 +1,16 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+
+type ConsentValue = "accepted" | "rejected" | null;
 
 export function useCookieConsent() {
-  const [consent, setConsent] = useState(() => {
-    return localStorage.getItem("cookie_consent") === "true";
+  const [consent, setConsentState] = useState<ConsentValue>(() => {
+    return (localStorage.getItem("cookie_consent") as ConsentValue) ?? null;
   });
 
-  useEffect(() => {
-    localStorage.setItem("cookie_consent", consent.toString());
-  }, [consent]);
+  const setConsent = (value: "accepted" | "rejected") => {
+    localStorage.setItem("cookie_consent", value);
+    setConsentState(value);
+  };
 
   return { consent, setConsent };
 }

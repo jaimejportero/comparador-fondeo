@@ -1,7 +1,13 @@
 import tipsImg from "../imagenes/tips.png"; // reemplaza con tu imagen
 import drawdownImg from "../imagenes/drawdown.jpg"; // reemplaza con tu imagen
+import { usePageMeta } from "../hooks/usePageMeta";
 
 export default function Faqs() {
+  usePageMeta({
+    title: "Preguntas Frecuentes sobre Prop Firms y Trading | FundedTools",
+    description:
+      "Resolvemos las dudas más comunes sobre cuentas fondeadas, drawdown, robots de trading, evaluaciones y gestión del riesgo. Todo en un solo lugar.",
+  });
   return (
     <div className="bg-gray-900 min-h-screen w-full text-white px-6 py-10">
       <div className="max-w-3xl mx-auto">
@@ -39,7 +45,7 @@ export default function Faqs() {
         </p>
 
         <h2 className="text-xl font-semibold mt-6 mb-2">¿Qué significa “drawdown” y por qué es importante?</h2>
-        <img src={drawdownImg} alt="Ilustración drawdown" className="w-full max-w-md rounded-lg mb-4"/>
+        <img src={drawdownImg} alt="Ilustración drawdown" className="w-full max-w-md rounded-lg mb-4" />
         <p className="mb-4">
           El drawdown es la caída máxima del capital desde un pico. Las cuentas fondeadas suelen poner límites estrictos al drawdown diario o total. Superarlo puede significar la pérdida automática de la cuenta.
         </p>

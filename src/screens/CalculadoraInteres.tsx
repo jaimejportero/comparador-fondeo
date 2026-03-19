@@ -22,8 +22,14 @@ interface AñoData {
   aportado: number;
   generado: number;
 }
+import { usePageMeta } from "../hooks/usePageMeta";
 
 export default function CalculadoraInteres() {
+  usePageMeta({
+    title: "Calculadora de Interés Compuesto para Traders | FundedTools",
+    description:
+      "Simula el crecimiento de tu capital con interés compuesto. Introduce capital inicial, aportación mensual, interés anual y duración para ver tu proyección.",
+  });
   const [capitalInicial, setCapitalInicial] = useState("");
   const [mensual, setMensual] = useState("");
   const [interes, setInteres] = useState("");

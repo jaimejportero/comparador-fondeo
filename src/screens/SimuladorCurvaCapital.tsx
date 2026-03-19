@@ -13,8 +13,15 @@ interface CapitalData {
   operacion: number;
   capital: number;
 }
+import { usePageMeta } from "../hooks/usePageMeta";
 
 export default function SimuladorCurvaCapital() {
+  usePageMeta({
+    title: "Simulador de Curva de Capital | FundedTools",
+    description:
+      "Simula la evolución de tu capital según tu winrate, ratio riesgo/beneficio y número de operaciones. Visualiza rachas y comprende el impacto del riesgo.",
+  });
+
   const [capitalInicial, setCapitalInicial] = useState("10000");
   const [riesgoPct, setRiesgoPct] = useState("1");
   const [winrate, setWinrate] = useState("55");
@@ -30,7 +37,7 @@ export default function SimuladorCurvaCapital() {
     const numOps = parseInt(operaciones);
 
     if (isNaN(capital) || isNaN(riesgo) || isNaN(win) || isNaN(rr) || isNaN(numOps)) return;
-  if (capital <= 0 || riesgo <= 0 || win <= 0 || rr <= 0 || numOps <= 0) {
+    if (capital <= 0 || riesgo <= 0 || win <= 0 || rr <= 0 || numOps <= 0) {
       alert("Todos los valores deben ser mayores que 0");
       return;
     }

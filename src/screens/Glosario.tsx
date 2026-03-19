@@ -5,8 +5,14 @@ interface Termino {
   definicion: string;
   categoria: string;
 }
+import { usePageMeta } from "../hooks/usePageMeta";
 
 export default function Glosario() {
+  usePageMeta({
+    title: "Glosario de Trading | Términos y definiciones | FundedTools",
+    description:
+      "Diccionario completo de términos de trading: drawdown, winrate, stop loss, prop firm, interés compuesto y más. Aprende el vocabulario esencial del trading.",
+  });
   const [busqueda, setBusqueda] = useState("");
 
   const glosario: Termino[] = [

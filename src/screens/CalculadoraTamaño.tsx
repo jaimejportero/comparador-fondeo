@@ -1,6 +1,12 @@
 import { useState } from "react";
+import { usePageMeta } from "../hooks/usePageMeta";
 
 export default function CalculadoraTamañoPosicion() {
+  usePageMeta({
+    title: "Calculadora de Tamaño de Posición | FundedTools",
+    description:
+      "Calcula cuántas unidades abrir según tu capital, riesgo por operación y stop loss. Ideal para cuentas fondeadas y gestión profesional del riesgo.",
+  });
   const [capitalCuenta, setCapitalCuenta] = useState("");
   const [riesgoPct, setRiesgoPct] = useState("");
   const [stopLoss, setStopLoss] = useState("");

@@ -1,4 +1,10 @@
+import { usePageMeta } from "../hooks/usePageMeta";
+
 export default function Cookies() {
+  usePageMeta({
+    title: "Política de Cookies | FundedTools",
+    description: "Información sobre las cookies utilizadas en FundedTools: cookies técnicas, de analítica y de publicidad de Google AdSense.",
+  });
   return (
     <div className="min-h-screen bg-gray-950 text-white p-6">
       <div className="max-w-3xl mx-auto bg-gray-900 p-6 rounded-2xl shadow-xl border border-gray-700">

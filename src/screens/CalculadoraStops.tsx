@@ -21,8 +21,14 @@ interface Vela {
     yBottom: number;
   };
 }
+import { usePageMeta } from "../hooks/usePageMeta";
 
 export default function CalculadoraStops() {
+  usePageMeta({
+    title: "Calculadora Stop Loss y Take Profit | FundedTools",
+    description:
+      "Calcula automáticamente tus niveles de Stop Loss y Take Profit según tu precio de entrada, porcentaje de riesgo y ratio riesgo/beneficio.",
+  });
   const [entrada, setEntrada] = useState("");
   const [riesgoPct, setRiesgoPct] = useState("");
   const [relacion, setRelacion] = useState("");

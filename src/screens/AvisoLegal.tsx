@@ -1,4 +1,10 @@
+import { usePageMeta } from "../hooks/usePageMeta";
+
 export default function AvisoLegal() {
+  usePageMeta({
+    title: "Aviso Legal | FundedTools",
+    description: "Aviso legal de FundedTools. Condiciones de uso, propiedad intelectual y descargo de responsabilidad financiera.",
+  });
   return (
     <div className="bg-gray-900 w-full text-white px-4 sm:px-6 py-10">
       <div className="max-w-3xl mx-auto">

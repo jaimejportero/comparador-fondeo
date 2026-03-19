@@ -46,14 +46,14 @@ export const Filtros: React.FC<FiltrosProps> = ({ filtros, setFiltros }) => {
     <section className="text-white">
       <header className="mb-8 max-w-4xl mx-auto text-center">
         <h1 className="text-4xl font-extrabold text-teal-400 mb-4">
-          Comparador de Cuentas Fondeadas para Traders en 2025
+          Comparador de Cuentas Fondeadas para Traders en 2026
         </h1>
         <p className="mb-6 text-gray-300 text-lg max-w-2xl mx-auto">
           ¿Quieres ser trader profesional sin arriesgar tu dinero? Compara las mejores cuentas fondeadas con condiciones actualizadas: capital inicial, fases, duración, y activos como Forex, Cripto o Futuros.
         </p>
         <img
           src={fondoImg}
-          alt="Comparador de cuentas fondeadas para trading 2025"
+          alt="Comparador de cuentas fondeadas para trading 2026"
           className="w-full max-h-96 object-cover rounded-xl shadow-xl mb-6"
         />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">

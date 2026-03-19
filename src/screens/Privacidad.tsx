@@ -15,7 +15,7 @@ export default function Privacidad() {
         </h1>
 
         <p className="mb-4">
-          Última actualización: <strong>9 de diciembre de 2025</strong>
+          Última actualización: <strong>9 de diciembre de 2026</strong>
         </p>
 
         <p className="mb-4">

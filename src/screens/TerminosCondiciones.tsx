@@ -14,7 +14,7 @@ export default function Terminos() {
         </h1>
 
         <p className="mb-4">
-          Última actualización: <strong>9 de diciembre de 2025</strong>
+          Última actualización: <strong>9 de diciembre de 2026</strong>
         </p>
 
         <h2 className="text-xl font-bold mt-6 mb-2">1. Aceptación de los términos</h2>

@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-400 text-sm text-center py-6">
       <div className="max-w-5xl mx-auto px-4">
-        <p className="mb-2">© 2025 Comparador de Fondeo</p>
+        <p className="mb-2">© 2026 Comparador de Fondeo</p>
         <div className="flex flex-wrap justify-center gap-x-4 gap-y-1">
           <Link to="/privacidad" className="underline hover:text-white">
             Política de Privacidad

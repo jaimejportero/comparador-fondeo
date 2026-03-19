@@ -179,9 +179,9 @@ const preguntasFrecuentes = [
 
 export default function App() {
   usePageMeta({
-    title: "Comparador de Cuentas Fondeadas 2025 | FundedTools",
+    title: "Comparador de Cuentas Fondeadas 2026 | FundedTools",
     description:
-      "Compara las mejores prop firms de 2025: FTMO, The5ers, Noctorial, FXIFY y más. Filtra por precio, capital, fases y activos. Gratis y sin registro.",
+      "Compara las mejores prop firms de 2026: FTMO, The5ers, Noctorial, FXIFY y más. Filtra por precio, capital, fases y activos. Gratis y sin registro.",
   });
   const [filtros, setFiltros] = useState({
     capitalMinimo: 0,
@@ -229,9 +229,9 @@ export default function App() {
 
   return (
     <>
-      <title>Comparador de Cuentas Fondeadas 2025 | Mejores cuentas de trading fondeado</title>
-      <meta name="description" content="Compara las mejores cuentas fondeadas para traders en 2025. Filtra por precio, capital, activos, fases y más. ¡Encuentra tu cuenta ideal!" />
-      <meta name="keywords" content="cuentas fondeadas, trading fondeado, prop firms, evaluación trading, cuentas de trading 2025, FTMO, The5ers, FXIFY, mejores cuentas fondeo" />
+      <title>Comparador de Cuentas Fondeadas 2026 | Mejores cuentas de trading fondeado</title>
+      <meta name="description" content="Compara las mejores cuentas fondeadas para traders en 2026. Filtra por precio, capital, activos, fases y más. ¡Encuentra tu cuenta ideal!" />
+      <meta name="keywords" content="cuentas fondeadas, trading fondeado, prop firms, evaluación trading, cuentas de trading 2026, FTMO, The5ers, FXIFY, mejores cuentas fondeo" />
       <meta name="robots" content="index, follow" />
       <meta name="author" content="SaludVistosa" />
 
